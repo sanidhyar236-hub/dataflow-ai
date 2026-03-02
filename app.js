@@ -28,7 +28,8 @@ async function runAI() {
       <h3>AI Output</h3>
       <pre>${data.result}</pre>
     `;
-  } catch (error) {
-    output.innerHTML = "❌ Error connecting to AI backend";
+  } catch (err) {
+    output.innerHTML = "❌ Backend error. Check console.";
+    console.error(err);
   }
 }
